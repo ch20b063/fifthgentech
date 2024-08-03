@@ -1,0 +1,115 @@
+.App {
+  text-align: center;
+}
+h1 {
+  text-align: center;
+  color: #333;
+}
+form {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form div {
+  margin-bottom: 15px;
+}
+input[type='text'],
+input[type='number'],
+input[type='submit'] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  box-sizing: border-box;
+}
+input[type='submit'] {
+  background: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+input[type='submit']:hover {
+  background: #555;
+}
+button {
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+select {
+  margin: 5px;
+}
+.device-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 16px;
+  text-align: left;
+}
+
+.device-table th,
+.device-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+}
+
+.device-table th {
+  background-color: #f4f4f4;
+  color: #333;
+  font-weight: bold;
+}
+
+.device-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.device-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.device-table button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.device-table button:hover {
+  background-color: darkred;
+}
+
+.device-table .actions {
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: darkred;
+}
