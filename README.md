@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This project consists of a backend and a frontend. The backend is responsible for handling TCP/IP communication and device management, while the frontend provides a user interface for interacting with the devices.I use  **Google ,chatGPT , Stack overflow and other tools** to write better code and for testing code and to understand problem. **But i know how its working.**
+This project consists of a backend and a frontend. The backend is responsible for handling TCP/IP communication and device management, while the frontend provides a user interface for interacting with the devices.I use  **Google ,chatGPT , Stack overflow and other tools** to write better code and for testing code and to understand problem. **But I know how its working and its working in my Laptop.**
 
 ### Backend
 
