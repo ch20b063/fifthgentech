@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This project consists of a backend and a frontend. The backend is responsible for handling TCP/IP communication and device management, while the frontend provides a user interface for interacting with the devices.
+This project consists of a backend and a frontend. The backend is responsible for handling TCP/IP communication and device management, while the frontend provides a user interface for interacting with the devices.I use  ## google ,chatGPT and other tools ### to write better code and for testing code and to understand problem.But i know how its working.
 
 ### Backend
 
@@ -35,7 +35,7 @@ backend_device_man_back/
 │ ├── name/
 │   └── communicationService.test.js
 │ └── unit/
-│ └── TCPHandler.test.js
+│   └── TCPHandler.test.js
 ├── app.js
 └── index.js
 ```
