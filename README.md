@@ -4,7 +4,7 @@
 
 This project consists of a backend and a frontend. The backend is responsible for handling TCP/IP communication and device management, while the frontend provides a user interface for interacting with the devices.I use  **Google ,chatGPT , Stack overflow and other tools** to write better code and for testing code and to understand problem. **But I know how its working and its working in my Laptop.**
 
-### Right now front will show only your data on screen beacuse we don't have real data (i commented down few fuctions which requied real time data),But you can test the data,just run test command (given in the last) to check backend.
+### Right now front will show only your data on screen beacuse we don't have real data (i commented down few fuctions which requied real time data),But you can test the data,just run test command (given in the last) to check backend with out run backend.
 
 ### Backend
 
