@@ -1,11 +1,13 @@
 import mongoose from "mongoose";
 
-export const dbConnection =  () => {
+const dbConnection =  () => {
     mongoose.connect(process.env.MONGO_URI, {
-        dbName: "PDF_CHAT_BOT"
+        dbName: "fifthtech",
     }).then(() => {
         console.log("Database connected successfully");
     }).catch((err) => {
         console.log(err);
     });
 }; 
+
+export default dbConnection;

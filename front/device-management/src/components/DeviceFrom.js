@@ -1,29 +1,24 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
 const DeviceForm = ({ addDevice }) => {
   const [name, setName] = useState('');
   const [ip, setIp] = useState('');
   const [port, setPort] = useState('');
-  const [protocol, setProtocol] = useState('tcp');
+  const [protocol, setProtocol] = useState('TCP');
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const device = { name, ip, port, protocol };
-    fetch('http://localhost:4000/api/devices', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(device),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        addDevice(data);
+    axios.post('http://localhost:4000/api/devices', device)
+      .then((response) => {
+        addDevice(response.data);
         setName('');
         setIp('');
         setPort('');
       })
       .catch((error) => console.error('Error adding device:', error));
+    
   };
 
   return (

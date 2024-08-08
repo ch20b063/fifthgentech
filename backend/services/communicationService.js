@@ -1,5 +1,6 @@
 import TCPHandler from '../handlers/TCPHandler.js';
 
+
 class CommunicationService {
     constructor() {
         this.clients = {};
@@ -27,5 +28,7 @@ class CommunicationService {
     }
 }
 
-const communicationService = new CommunicationService();
-export default communicationService;
+
+export default CommunicationService;
+
+

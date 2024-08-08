@@ -2,7 +2,7 @@ import express from 'express';
 import { config } from 'dotenv';
 import cors from 'cors';
 import deviceRoutes from './routes/deviceRoutes.js';
-import { dbConnection } from './database/dbcollection';
+import  dbConnection from './database/dbcollection.js';
 config({
     path: './config/config.env'
 });
@@ -17,7 +17,9 @@ app.use(cors({
 }));
 
 
-app.get('/api', deviceRoutes );
 app.use(express.json());
+app.use('/api', deviceRoutes);
+
 dbConnection();
+
 export default app;

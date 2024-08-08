@@ -1,14 +1,11 @@
 import React from 'react';
+import axios from 'axios';
 import '../App.css';
 
 const DeviceList = ({ devices, removeDevice }) => {
   const handleRemove = (deviceId) => {
-    fetch(`http://localhost:4000/api/devices/${deviceId}`, {
-      method: 'DELETE',
-    })
-      .then(() => {
-        removeDevice(deviceId);
-      })
+    axios.delete(`http://localhost:4000/api/devices/${deviceId}`)
+      .then(() => removeDevice(deviceId))
       .catch((error) => console.error('Error removing device:', error));
   };
 

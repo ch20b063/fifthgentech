@@ -1,30 +1,47 @@
 import express from 'express';
 import Device from '../models/deviceModel.js';
-import communicationService from '../services/communicationService.js';
+// import CommunicationService from '../services/CommunicationService.js';
 
 const router = express.Router();
 
 router.post('/devices', async (req, res) => {
-    const device = new Device(req.body);
-    await device.save();
-    await communicationService.addDevice(device);
-    res.status(201).send(device);
+    try {
+        const device = new Device(req.body);
+        console.log(device);
+        await device.save();
+        // await CommunicationService.addDevice(device);
+        res.status(201).send(device);
+    } catch (error) {
+        res.status(500).send({ error: error.message });
+    }
 });
 
 router.get('/devices', async (req, res) => {
-    const devices = await Device.find();
-    res.send(devices);
+    try {
+        const devices = await Device.find();
+        res.send(devices);
+    } catch (error) {
+        res.status(500).send({ error: error.message });
+    }
 });
 
 router.put('/devices/:id', async (req, res) => {
-    const device = await Device.findByIdAndUpdate(req.params.id, req.body, { new: true });
-    res.send(device);
+    try {
+        const device = await Device.findByIdAndUpdate(req.params.id, req.body, { new: true });
+        res.send(device);
+    } catch (error) {
+        res.status(500).send({ error: error.message });
+    }
 });
 
 router.delete('/devices/:id', async (req, res) => {
-    const device = await Device.findByIdAndDelete(req.params.id);
-    communicationService.removeDevice(device._id);
-    res.status(204).send();
+    try {
+        const device = await Device.findByIdAndDelete(req.params.id);
+        // CommunicationService.removeDevice(device._id);
+        res.status(204).send();
+    } catch (error) {
+        res.status(500).send({ error: error.message });
+    }
 });
 
 export default router;

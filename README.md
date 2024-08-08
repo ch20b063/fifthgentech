@@ -4,6 +4,8 @@
 
 This project consists of a backend and a frontend. The backend is responsible for handling TCP/IP communication and device management, while the frontend provides a user interface for interacting with the devices.I use  **Google ,chatGPT , Stack overflow and other tools** to write better code and for testing code and to understand problem. **But I know how its working and its working in my Laptop.**
 
+### Right now front will show only your data on screen beacuse we don't have real data (i commented down few fuctions which requied real time data),But you can test the data,just run test command (given in the last) to check backend.
+
 ### Backend
 
 The backend, located in the `backend_device_man_back` directory, supports TCP/IP communication, communicates with multiple devices simultaneously, and allows for future additions of communication protocols. It also includes unit tests and a stub to test TCP/IP communication.
@@ -71,7 +73,7 @@ frontend/device-management/
 
 - Node.js
 - npm (Node Package Manager)
-- MongoDB
+- MongoDB "You have to your localdata"
 
 ### Backend
 
@@ -130,7 +132,7 @@ Once both the backend and frontend servers are running, you can interact with th
 1. **Run the backend tests:**
 
     ```sh
-    npm test
+    npm test:run
     ```
 
 
