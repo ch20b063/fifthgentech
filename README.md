@@ -73,7 +73,7 @@ frontend/device-management/
 
 - Node.js
 - npm (Node Package Manager)
-- MongoDB "You have to your localdata"
+- MongoDB "You have to change with your local database"
 
 ### Backend
 
